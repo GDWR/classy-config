@@ -36,7 +36,7 @@ def print_value(value: int = ConfigParam("nested.value", int)) -> None:
     "username": "GDWR",
     "email": "gregory.dwr@gmail.com",
     "lucky_number": 17
-  }
+  },
 
   "nested": {
     "value": 10
