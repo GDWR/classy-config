@@ -1,0 +1,29 @@
+{
+  "value0": 3,
+  "value1": false,
+  "value2": "Apple",
+  "value3": [1, 2, 3, 4],
+  "value4": {
+    "arb": "strings",
+    "and": 123,
+    "etc.": null
+  },
+
+  "GDWR": {
+    "name": "Greg",
+    "age": 22,
+    "email": "gregory.dwr@gmail.com",
+    "alive": true
+  },
+  "nested": {
+    "config": {
+      "GDWR": {
+        "name": "Greg",
+        "age": 22,
+        "email": "gregory.dwr@gmail.com",
+        "alive": true
+      },
+      "value": "Banana"
+    }
+  }
+}

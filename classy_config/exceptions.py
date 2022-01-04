@@ -1,0 +1,6 @@
+class DoubleCreation(BaseException):
+    ...
+
+
+class InstanceNotCreated(BaseException):
+    ...
