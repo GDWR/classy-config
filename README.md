@@ -23,6 +23,10 @@ class Author(BaseModel):
 # Resolve default values based on your config
 def print_author(author: Author = ConfigParam("author", Author)) -> None:
     print(author)
+    
+# Allows for nested values
+def print_value(value: int = ConfigParam("nested.value", int)) -> None:
+    print(value)
 ```
 ```json
 {
@@ -32,6 +36,10 @@ def print_author(author: Author = ConfigParam("author", Author)) -> None:
     "username": "GDWR",
     "email": "gregory.dwr@gmail.com",
     "lucky_number": 17
+  }
+
+  "nested": {
+    "value": 10
   }
 }
 ```
