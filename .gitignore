@@ -1,2 +1,3 @@
-/dist/
+dist/
+venv/
 .pytest_cache/
