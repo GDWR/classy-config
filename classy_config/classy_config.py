@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import json
 from os import PathLike
 from typing import Union, Optional
@@ -8,7 +6,7 @@ from .exceptions import DoubleCreation
 
 
 class ClassyConfig:
-    instance: Optional[ClassyConfig] = None
+    instance: Optional["ClassyConfig"] = None
 
     def __new__(cls, *args, **kwargs):
         if cls.instance is not None:
