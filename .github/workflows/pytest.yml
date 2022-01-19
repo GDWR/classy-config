@@ -19,4 +19,5 @@ jobs:
         poetry install
     - name: Test with pytest
       run: |
+        cd tests
         poetry run pytest
