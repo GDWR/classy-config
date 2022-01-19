@@ -7,8 +7,8 @@ Inject your config variables into methods, so they are as close to usage as poss
 
 from classy_config import BaseModel, ClassyConfig, ConfigParam
 
-# Create your global config manager (example config.json below)
-config = ClassyConfig(config_file="config.json")
+# Create your global config manager (example test-config.json below)
+config = ClassyConfig(config_file="test-config.json")
 
 # Resolve default values based on your config
 def print_current_version(version: str = ConfigParam("version", str)) -> None:
