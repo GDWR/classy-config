@@ -1,6 +1,10 @@
 name: Checks
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'classy_config/**'
+      - 'tests/**'
 
 jobs:
   lint:
