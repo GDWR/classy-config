@@ -1,6 +1,7 @@
-from typing import Type, get_origin
+from typing import Type, Dict, List
 
 from pydantic import BaseModel
+from typing_inspect import get_origin
 
 from .classy_config import ClassyConfig
 from .exceptions import InstanceNotCreated
@@ -20,7 +21,7 @@ class _ResolveFromConfig(type):
             except KeyError:
                 raise KeyError(f"Config: {variable_path} does not exist")
 
-        if get_origin(_type) in (list, dict):
+        if get_origin(_type) in (List, Dict):
             return data
         if issubclass(_type, BaseModel):
             return _type(**data)

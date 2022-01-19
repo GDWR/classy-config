@@ -1,5 +1,6 @@
 import json
-from typing import Tuple, Type, List, get_origin, Dict
+from typing import Tuple, Type, List, Dict
+from typing_inspect import get_origin
 
 import pytest
 
@@ -46,7 +47,7 @@ def test_config_param(test_value: Tuple[str, Type], classy_config: ClassyConfig)
     raw_value = classy_config.raw_config[config_path]
     typed_value = raw_value
 
-    if get_origin(config_type) not in (list, dict):
+    if get_origin(config_type) not in (List, Dict):
         typed_value = config_type(raw_value)
 
     def asset_value(value: Type = ConfigParam(config_path, config_type)) -> None:
