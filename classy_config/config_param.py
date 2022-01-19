@@ -1,4 +1,4 @@
-from typing import Type, Dict, List
+from typing import Type, Dict, List, TypeVar
 
 from pydantic import BaseModel
 from typing_inspect import get_origin
@@ -6,9 +6,11 @@ from typing_inspect import get_origin
 from .classy_config import ClassyConfig
 from .exceptions import InstanceNotCreated
 
+T = TypeVar("T")
+
 
 class _ResolveFromConfig(type):
-    def __call__(cls, variable_path: str, _type: Type, deliminator: str = "."):
+    def __call__(cls, variable_path: str, _type: Type[T], deliminator: str = ".") -> T:
 
         config = ClassyConfig.instance
         if config is None:
