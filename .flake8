@@ -1,0 +1,14 @@
+[flake8]
+max-line-length=160
+docstring-convention=all
+import-order-style=pycharm
+exclude=
+    constants.py,__pycache__,.cache,
+    .git,
+    .md,.svg,.png
+    tests,
+    venv,.venv,
+
+ignore=
+    # Module docstrings
+    C0114
