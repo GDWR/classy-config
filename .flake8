@@ -8,6 +8,7 @@ exclude=
     .md,.svg,.png
     tests,
     venv,.venv,
+    __init__.py
 
 ignore=
     # Module docstrings
