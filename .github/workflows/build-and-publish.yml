@@ -27,8 +27,7 @@ jobs:
     - name: Increment version number
       id: version
       run: |
-        poetry version patch
-        echo "::set-output name=version_number::"
+        echo "::set-output name=version_tag::$(poetry version patch)"
 
     - name: Commit files
       run: |
@@ -43,7 +42,7 @@ jobs:
         branch: ${{ github.ref }}
 
     outputs:
-      version_number: ${{ steps.version.outputs.version_number }}
+      version_tag: ${{ steps.version.outputs.version_tag }}
 
   build:
     needs: increment-version
@@ -68,8 +67,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ needs.increment-version.outputs.version_number }}
-          release_name: Release ${{ needs.increment-version.outputs.version_number }}
+          tag_name: ${{ needs.increment-version.outputs.version_tag }}
+          release_name: Release ${{ needs.increment-version.outputs.version_tag }}
           draft: false
           prerelease: false
 
