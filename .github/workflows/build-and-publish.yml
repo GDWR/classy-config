@@ -50,6 +50,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Wait for push
+        run: sleep 30s
+
       - uses: actions/checkout@v2
 
       - name: Set up Python
