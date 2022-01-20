@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-        source $HOME/.poetry/bin/env
+        source $HOME/.poetry/env
 
     - name: Increment version number
       id: version
@@ -60,7 +60,7 @@ jobs:
       - name: Install dependencies
         run: |
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-          source $HOME/.poetry/bin/env
+          source $HOME/.poetry/env
 
       - name: Create release
         id: create_release
