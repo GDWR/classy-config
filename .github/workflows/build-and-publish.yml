@@ -27,7 +27,8 @@ jobs:
     - name: Increment version number
       id: version
       run: |
-        echo "::set-output name=version_tag::$(poetry version patch)"
+        poetry version patch
+        echo "::set-output name=version_tag::$(poetry version)"
 
     - name: Commit files
       run: |
