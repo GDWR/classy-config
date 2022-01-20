@@ -1,8 +1,7 @@
-from typing import List, Dict, Tuple, Type
+from typing import Tuple, Type
 
 import pytest
 from pydantic import BaseModel
-from typing_inspect import get_origin
 
 from classy_config import ClassyConfig, ConfigParam
 
@@ -12,20 +11,14 @@ from classy_config import ClassyConfig, ConfigParam
         ("value0", int),
         ("value1", bool),
         ("value2", str),
-        ("value3", List),
         ("value3", list),
-        ("value4", Dict),
         ("value4", dict)
     ]
 )
 def test_config_param(test_value: Tuple[str, Type], classy_config: ClassyConfig):
     config_path, config_type = test_value
-
     raw_value = classy_config.raw_config[config_path]
-    typed_value = raw_value
-
-    if get_origin(config_type) not in (List, Dict):
-        typed_value = config_type(raw_value)
+    typed_value = config_type(raw_value)
 
     def asset_value(value: Type = ConfigParam(config_path, config_type)) -> None:
         assert typed_value == value
