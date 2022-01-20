@@ -6,36 +6,77 @@ on:
       - master
 
 jobs:
-  deploy:
+  increment-version:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.6'
+
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install poetry
+        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+        source $HOME/.poetry/bin/env
+
     - name: Increment version number
+      id: version
       run: |
         poetry version patch
-        echo "TAG_NAME=$(poetry version)" >> $GITHUB_ENV
-    - name: Create release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        echo "::set-output name=version_number::"
+
+    - name: Commit files
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -m "Increment version number" -a
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        tag_name: ${{ env.TAG_NAME }}
-        release_name: Release ${{ env.TAG_NAME }}
-        draft: false
-        prerelease: false
-    - name: Build package
-      run: poetry build --no-interaction
-    - name: Publish package
-      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+
+    outputs:
+      version_number: ${{ steps.version.outputs.version_number }}
+
+  build:
+    needs: increment-version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+
+      - name: Install dependencies
+        run: |
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+          source $HOME/.poetry/bin/env
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.increment-version.outputs.version_number }}
+          release_name: Release ${{ needs.increment-version.outputs.version_number }}
+          draft: false
+          prerelease: false
+
+      - name: Build package
+        run: poetry build --no-interaction
+
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
