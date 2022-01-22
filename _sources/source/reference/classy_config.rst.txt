@@ -1,0 +1,17 @@
+classy\_config package
+======================
+
+.. automodule:: classy_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   classy_config.classy_config
+   classy_config.config_param
+   classy_config.exceptions
