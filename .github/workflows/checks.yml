@@ -3,6 +3,9 @@ name: Checks
 on:
   pull_request:
       types: [opened, reopened, synchronize, ready_for_review]
+      paths:
+        - 'classy_config/**'
+        - 'tests/**'
   push:
     paths:
       - 'classy_config/**'
