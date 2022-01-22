@@ -1,0 +1,48 @@
+name: Create Documentation
+
+on:
+  pull_request:
+    types: [ opened, reopened, synchronize, ready_for_review ]
+  push:
+    branches:
+      - master
+
+jobs:
+  create-documentation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.6'
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install poetry
+        poetry install
+
+    - name: Generate Documenation
+      run: poetry run sphinx-apidoc --output-dir ./docs/source/reference classy_config --separate --no-toc --module-first
+
+    - name: Build HTML
+      run: |
+        cd docs
+        poetry run make html
+        touch build/html/.nojekyll
+
+    - name: Documentation Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: documentation
+        path: |
+          docs/build/html/*
+
+    - name: Deploy Page
+      uses: JamesIves/github-pages-deploy-action@v4.2.2
+      if: github.ref == 'refs/heads/master'
+      with:
+        branch: gh-pages
+        folder: docs/build/html # The folder the action should deploy.
