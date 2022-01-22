@@ -1,0 +1,38 @@
+name: Create Documentation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  create-documentation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.6'
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install poetry
+        poetry install
+
+    - name: Generate Documenation
+      run: poetry run sphinx-apidoc --output-dir ./docs/source/reference classy_config --seperate --no-toc --module-first
+
+    - name: Build HTML
+      run: |
+        cd docs
+        poetry run make html
+
+    - name: Documentation Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: documentation
+        path: |
+          docs/build/*
