@@ -38,3 +38,10 @@ jobs:
         name: documentation
         path: |
           docs/build/html/*
+
+    - name: Deploy Page
+      uses: JamesIves/github-pages-deploy-action@v4.2.2
+#      if: github.ref == 'refs/heads/master'
+      with:
+        branch: gh-pages
+        folder: docs/build/html # The folder the action should deploy.
