@@ -7,6 +7,7 @@ from .exceptions import DoubleCreation
 
 class ClassyConfig:
     instance: Optional["ClassyConfig"] = None
+    _raw_config: Optional[dict] = None
 
     def __new__(cls, *args, **kwargs):
         if cls.instance is not None:
@@ -19,8 +20,11 @@ class ClassyConfig:
         self.config_file = config_file
 
     def _get_raw_config_file(self) -> dict:
-        with open(self.config_file, "r") as f:
-            return json.load(f)
+        if self._raw_config is None:
+            with open(self.config_file, "r") as f:
+                self._raw_config = json.load(f)
+
+        return self._raw_config
 
     @property
     def raw_config(self) -> dict:
