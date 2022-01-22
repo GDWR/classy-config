@@ -25,7 +25,7 @@ jobs:
         poetry install
 
     - name: Generate Documenation
-      run: poetry run sphinx-apidoc --output-dir ./docs/source/reference classy_config --seperate --no-toc --module-first
+      run: poetry run sphinx-apidoc --output-dir ./docs/source/reference classy_config --separate --no-toc --module-first
 
     - name: Build HTML
       run: |
