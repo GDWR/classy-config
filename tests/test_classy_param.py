@@ -1,9 +1,11 @@
-from typing import Tuple, Type
+from typing import Tuple, Type, TypeVar
 
 import pytest
 from pydantic import BaseModel
 
 from classy_config import ClassyConfig, ConfigParam
+
+T = TypeVar("T")
 
 
 @pytest.mark.parametrize(
@@ -15,12 +17,12 @@ from classy_config import ClassyConfig, ConfigParam
         ("value4", dict)
     ]
 )
-def test_config_param(test_value: Tuple[str, Type], classy_config: ClassyConfig):
+def test_config_param(test_value: Tuple[str, Type[T]], classy_config: ClassyConfig):
     config_path, config_type = test_value
     raw_value = classy_config.raw_config[config_path]
     typed_value = config_type(raw_value)
 
-    def asset_value(value: Type = ConfigParam(config_path, config_type)) -> None:
+    def asset_value(value: Type[T] = ConfigParam(config_path, config_type)) -> None:
         assert typed_value == value
 
     asset_value()
