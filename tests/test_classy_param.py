@@ -72,3 +72,12 @@ def test_custom_deliminator(classy_config: ClassyConfig):
         assert typed_value == value
 
     assert_value()
+
+
+def test_gather_param_inline(classy_config: ClassyConfig):
+    raw_value = classy_config.raw_config["nested"]["config"]["GDWR"]
+    typed_value = User(**raw_value)
+
+    value = ConfigParam("nested->config->GDWR", User, deliminator="->")
+
+    assert typed_value == value
