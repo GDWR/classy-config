@@ -3,6 +3,9 @@ name: Create Documentation
 on:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
+    paths:
+      - 'classy_config/**'
+      - 'docs/**'
   push:
     branches:
       - master
@@ -42,7 +45,7 @@ jobs:
 
     - name: Deploy Page
       uses: JamesIves/github-pages-deploy-action@v4.2.2
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/main'
       with:
         branch: gh-pages
         folder: docs/build/html # The folder the action should deploy.
