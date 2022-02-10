@@ -3,6 +3,9 @@ name: Create Documentation
 on:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
+    paths:
+      - 'classy_config/**'
+      - 'docs/**'
   push:
     branches:
       - master
