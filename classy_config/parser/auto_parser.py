@@ -1,10 +1,11 @@
 from pathlib import Path
+from typing import Dict
 
 from .json_parser import json_parser
 from .parser import Parser
 from .toml_parser import toml_parser
 
-parser_mapping: dict[str, Parser] = {
+parser_mapping: Dict[str, Parser] = {
     ".json": json_parser,
     ".toml": toml_parser,
 }
