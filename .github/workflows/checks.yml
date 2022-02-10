@@ -6,10 +6,6 @@ on:
       paths:
         - 'classy_config/**'
         - 'tests/**'
-  push:
-    paths:
-      - 'classy_config/**'
-      - 'tests/**'
 
 jobs:
   lint:
