@@ -5,8 +5,7 @@
   "value3": [1, 2, 3, 4],
   "value4": {
     "arb": "strings",
-    "and": 123,
-    "etc.": null
+    "and": 123
   },
 
   "GDWR": {

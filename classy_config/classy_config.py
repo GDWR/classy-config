@@ -1,8 +1,9 @@
-import json
 from os import PathLike
+from pathlib import Path
 from typing import Optional, Union
 
 from .exceptions import DoubleCreation
+from .parser import Parser, auto_parser
 
 
 class ClassyConfig:
@@ -23,8 +24,12 @@ class ClassyConfig:
         cls.instance = super(ClassyConfig, cls).__new__(cls)
         return cls.instance
 
-    def __init__(self, config_file: Union[str, PathLike]) -> None:
-        self.config_file = config_file
+    def __init__(self, filepath: Union[str, PathLike], parser: Parser = auto_parser) -> None:
+        self.config_file = Path(filepath)
+        self.parser = parser
+
+        if not self.config_file.exists():
+            raise FileNotFoundError()
 
     @property
     def raw_config(self) -> dict:
@@ -35,7 +40,6 @@ class ClassyConfig:
             so future access will not require another file read.
         """
         if self._raw_config is None:
-            with open(self.config_file, "r") as f:
-                self._raw_config = json.load(f)
+            self._raw_config = self.parser(self.config_file)
 
         return self._raw_config
