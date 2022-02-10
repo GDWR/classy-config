@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "classy_config"
-version = "0.1.7"
+version = "0.1.8-alpha.0"
 description = "Inject your config variables into methods, so they are as close to usage as possible."
 readme = "README.md"
 repository = "https://github.com/GDWR/classy-config"
