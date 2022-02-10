@@ -6,6 +6,9 @@ on:
       paths:
         - 'classy_config/**'
         - 'tests/**'
+  push:
+    branches:
+      - main
 
 jobs:
   lint:
