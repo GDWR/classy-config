@@ -1,0 +1,7 @@
+classy\_config.parser.toml\_parser module
+=========================================
+
+.. automodule:: classy_config.parser.toml_parser
+   :members:
+   :undoc-members:
+   :show-inheritance:

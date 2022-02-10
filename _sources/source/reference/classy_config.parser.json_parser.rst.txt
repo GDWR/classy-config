@@ -1,0 +1,7 @@
+classy\_config.parser.json\_parser module
+=========================================
+
+.. automodule:: classy_config.parser.json_parser
+   :members:
+   :undoc-members:
+   :show-inheritance:

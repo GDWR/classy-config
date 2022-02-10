@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>classy_config.config_param module &mdash; Classy Config  documentation</title>
+  <title>classy_config.parser package &mdash; Classy Config  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="classy_config.exceptions module" href="classy_config.exceptions.html" />
-    <link rel="prev" title="classy_config.classy_config module" href="classy_config.classy_config.html" /> 
+    <link rel="next" title="classy_config.parser.auto_parser module" href="classy_config.parser.auto_parser.html" />
+    <link rel="prev" title="classy_config package" href="classy_config.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,13 +43,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../guides/index.html">Guides</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="classy_config.html">classy_config package</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="classy_config.html#subpackages">Subpackages</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="classy_config.html#submodules">Submodules</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="classy_config.classy_config.html">classy_config.classy_config module</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">classy_config.config_param module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classy_config.exceptions.html">classy_config.exceptions module</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="classy_config.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">classy_config.parser package</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="classy_config.html#submodules">Submodules</a></li>
 </ul>
 </li>
 </ul>
@@ -72,9 +70,9 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">Reference</a> &raquo;</li>
           <li><a href="classy_config.html">classy_config package</a> &raquo;</li>
-      <li>classy_config.config_param module</li>
+      <li>classy_config.parser package</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/source/reference/classy_config.config_param.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/source/reference/classy_config.parser.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -82,23 +80,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-classy_config.config_param">
-<span id="classy-config-config-param-module"></span><h1>classy_config.config_param module<a class="headerlink" href="#module-classy_config.config_param" title="Permalink to this headline"></a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="classy_config.config_param.ConfigParam">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classy_config.config_param.</span></span><span class="sig-name descname"><span class="pre">ConfigParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deliminator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classy_config.config_param.ConfigParam" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Resolve to a value defined within the config.</p>
-</dd></dl>
-
+  <section id="module-classy_config.parser">
+<span id="classy-config-parser-package"></span><h1>classy_config.parser package<a class="headerlink" href="#module-classy_config.parser" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classy_config.parser.auto_parser.html">classy_config.parser.auto_parser module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classy_config.parser.json_parser.html">classy_config.parser.json_parser module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classy_config.parser.parser.html">classy_config.parser.parser module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classy_config.parser.toml_parser.html">classy_config.parser.toml_parser module</a></li>
+</ul>
+</div>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classy_config.classy_config.html" class="btn btn-neutral float-left" title="classy_config.classy_config module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classy_config.exceptions.html" class="btn btn-neutral float-right" title="classy_config.exceptions module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classy_config.html" class="btn btn-neutral float-left" title="classy_config package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classy_config.parser.auto_parser.html" class="btn btn-neutral float-right" title="classy_config.parser.auto_parser module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
