@@ -8,6 +8,9 @@ on:
         required: true
         type: choice
         options:
+          - prepatch
+          - preminor
+          - premajor
           - patch
           - minor
           - major
@@ -19,7 +22,16 @@ jobs:
     steps:
 
     - name: Check if input is valid
-      if: ${{ github.event.inputs.logLevel != 'path' && github.event.inputs.logLevel != 'minor' && github.event.inputs.logLevel != 'major' }}
+      if: |
+       ${{ 
+          github.event.inputs.version_type != 'path' && 
+          github.event.inputs.version_type != 'minor' && 
+          github.event.inputs.version_type != 'major' &&
+          github.event.inputs.version_type != 'premajor' &&
+          github.event.inputs.version_type != 'preminor' &&
+          github.event.inputs.version_type != 'prepatch'
+        }}
+
       run: |
         echo "Invalid version increment"
         exit 1
