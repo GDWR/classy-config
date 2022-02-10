@@ -8,7 +8,7 @@ on:
       - 'docs/**'
   push:
     branches:
-      - master
+      - main
 
 jobs:
   create-documentation:

@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import json
 from os import PathLike
 from typing import Optional, Union
@@ -13,7 +11,7 @@ class ClassyConfig:
     instance: Optional["ClassyConfig"] = None
     _raw_config: Optional[dict] = None
 
-    def __new__(cls, *args, **kwargs) -> ClassyConfig:
+    def __new__(cls, *args, **kwargs) -> "ClassyConfig":
         """
         Singleton implementation.
 
