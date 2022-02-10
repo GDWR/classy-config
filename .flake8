@@ -11,5 +11,9 @@ exclude=
     __init__.py
 
 ignore=
-    # Module docstrings
-    C0114
+
+    # Docstrings
+    C0114, D100, D107, D203, D212
+
+    # Annotations
+    ANN101, ANN002, ANN003

@@ -1,4 +1,4 @@
-from typing import Type, Dict, List, TypeVar
+from typing import Dict, List, Type, TypeVar
 
 from pydantic import BaseModel
 from typing_inspect import get_origin
@@ -32,4 +32,4 @@ class _ResolveFromConfig(type):
 
 
 class ConfigParam(metaclass=_ResolveFromConfig):
-    ...
+    """Resolve to a value defined within the config."""
