@@ -1,7 +1,6 @@
 # ClassyConfig
 
-Inject your config variables into methods, so they are as close to usage as possible.
-
+`ClassyConfig` is a Python3 package aiming to remove the need for a `config.py` or `settings.py` file.
 
 ```py
 
