@@ -21,22 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Check if input is valid
-      if: |
-       ${{ 
-          github.event.inputs.version_type != 'patch' && 
-          github.event.inputs.version_type != 'minor' && 
-          github.event.inputs.version_type != 'major' &&
-          github.event.inputs.version_type != 'premajor' &&
-          github.event.inputs.version_type != 'preminor' &&
-          github.event.inputs.version_type != 'prepatch'
-        }}
-
-      run: |
-        echo ${{ github.event.inputs.version_type }}
-        echo "Invalid version increment"
-        exit 1
-
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
