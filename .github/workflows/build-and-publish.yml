@@ -1,14 +1,29 @@
 name: Build and Publish
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: "Patch"
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
 
 jobs:
   increment-version:
     runs-on: ubuntu-latest
     steps:
+
+    - name: Check if input is valid
+      if: ${{ github.event.inputs.logLevel != 'path' && github.event.inputs.logLevel != 'minor' && github.event.inputs.logLevel != 'major' }}
+      run: |
+        echo "Invalid version increment"
+        exit 1
+
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
@@ -27,7 +42,7 @@ jobs:
     - name: Increment version number
       id: version
       run: |
-        poetry version patch
+        poetry version ${{ github.event.inputs.logLevel }}
         echo "::set-output name=version_tag::$(poetry version | grep --only-matching '[0-9].[0-9].[0-9]')"
 
     - name: Commit files
