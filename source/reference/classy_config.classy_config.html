@@ -82,8 +82,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="classy-config-classy-config-module">
-<h1>classy_config.classy_config module<a class="headerlink" href="#classy-config-classy-config-module" title="Permalink to this headline"></a></h1>
+  <section id="module-classy_config.classy_config">
+<span id="classy-config-classy-config-module"></span><h1>classy_config.classy_config module<a class="headerlink" href="#module-classy_config.classy_config" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="classy_config.classy_config.ClassyConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classy_config.classy_config.</span></span><span class="sig-name descname"><span class="pre">ClassyConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classy_config.classy_config.ClassyConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define your config filepath.</p>
+<p>Singleton implementation.</p>
+<p>if the object has already been created a DoubleCreation error is raised.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="classy_config.classy_config.ClassyConfig.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#classy_config.classy_config.ClassyConfig" title="classy_config.classy_config.ClassyConfig"><span class="pre">classy_config.classy_config.ClassyConfig</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#classy_config.classy_config.ClassyConfig.instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="classy_config.classy_config.ClassyConfig.raw_config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raw_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">MutableMapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#classy_config.classy_config.ClassyConfig.raw_config" title="Permalink to this definition"></a></dt>
+<dd><p>Gathers the raw config from the file.</p>
+<dl class="simple">
+<dt>This config file is read once &amp; saved to an instance attribute,</dt><dd><p>so future access will not require another file read.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
