@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Dict
+from typing import Any, Dict, MutableMapping
 
 from .json_parser import json_parser
 from .parser import Parser
@@ -11,7 +11,7 @@ parser_mapping: Dict[str, Parser] = {
 }
 
 
-def auto_parser(filepath: Path) -> dict:
+def auto_parser(filepath: Path) -> MutableMapping[str, Any]:
     """Resolve a parse using the file's extension & use it to construct a dict."""
     resolved_parser = parser_mapping[filepath.suffix]
     return resolved_parser(filepath)

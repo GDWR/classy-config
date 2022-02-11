@@ -11,6 +11,7 @@ license = "MIT"
 python = "^3.6.2"
 pydantic = "^1.9.0"
 typing-inspect = "^0.7.1"
+pyright = "^0.0.13"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
@@ -25,6 +26,13 @@ flake8-docstrings = "^1.6.0"
 flake8-import-order = "^0.18.1"
 flake8-string-format = "^0.3.0"
 pep8-naming = "^0.12.1"
+
+[tool.pyright]
+include = ["classy_config"]
+exclude = [
+    "**/__pycache__",
+]
+
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

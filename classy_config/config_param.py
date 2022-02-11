@@ -1,4 +1,4 @@
-from typing import Dict, List, Type, TypeVar
+from typing import Dict, List, Type, TypeVar, cast
 
 from pydantic import BaseModel
 from typing_inspect import get_origin
@@ -24,7 +24,7 @@ class _ResolveFromConfig(type):
                 raise KeyError(f"Config: {variable_path} does not exist")
 
         if get_origin(_type) in (List, Dict):
-            return data
+            return _type(data)
         if issubclass(_type, BaseModel):
             return _type(**data)
         else:
