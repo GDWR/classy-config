@@ -1,6 +1,6 @@
 from os import PathLike
 from pathlib import Path
-from typing import Optional, Union
+from typing import Any, MutableMapping, Optional, Union
 
 from .exceptions import DoubleCreation
 from .parser import Parser, auto_parser
@@ -10,7 +10,7 @@ class ClassyConfig:
     """Define your config filepath."""
 
     instance: Optional["ClassyConfig"] = None
-    _raw_config: Optional[dict] = None
+    _raw_config: Optional[MutableMapping[str, Any]] = None
 
     def __new__(cls, *args, **kwargs) -> "ClassyConfig":
         """
@@ -32,7 +32,7 @@ class ClassyConfig:
             raise FileNotFoundError()
 
     @property
-    def raw_config(self) -> dict:
+    def raw_config(self) -> MutableMapping[str, Any]:
         """
         Gathers the raw config from the file.
 

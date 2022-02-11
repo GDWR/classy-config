@@ -24,7 +24,7 @@ class _ResolveFromConfig(type):
                 raise KeyError(f"Config: {variable_path} does not exist")
 
         if get_origin(_type) in (List, Dict):
-            return data
+            return _type(data)
         if issubclass(_type, BaseModel):
             return _type(**data)
         else:
