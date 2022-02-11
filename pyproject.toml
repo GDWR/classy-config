@@ -14,7 +14,7 @@ typing-inspect = "^0.7.1"
 pyright = "^0.0.13"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.5"
+pytest = "^7.0.0"
 flake8 = "^4.0.1"
 Sphinx = "^4.3.2"
 sphinx-rtd-theme = "^1.0.0"
