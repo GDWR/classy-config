@@ -12,6 +12,7 @@ python = "^3.6.2"
 pydantic = "^1.9.0"
 typing-inspect = "^0.7.1"
 pyright = "^0.0.13"
+toml = "^0.10.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.0"
