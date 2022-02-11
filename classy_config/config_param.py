@@ -1,4 +1,4 @@
-from typing import Dict, List, Type, TypeVar, cast
+from typing import Dict, List, Type, TypeVar
 
 from pydantic import BaseModel
 from typing_inspect import get_origin
