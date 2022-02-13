@@ -1,0 +1,9 @@
+[window]
+name="Dvd bounce"
+height=512
+width=512
+
+[logo]
+size=16
+x_speed=5
+y_speed=2.5
