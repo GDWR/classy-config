@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="logo_bounce" type="PythonConfigurationType" factoryName="Python" folderName="examples">
+  <configuration default="false" name="simple" type="PythonConfigurationType" factoryName="Python" folderName="examples">
     <module name="ClassyConfig" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
@@ -7,12 +7,12 @@
       <env name="PYTHONUNBUFFERED" value="1" />
     </envs>
     <option name="SDK_HOME" value="" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo/logo_bounce" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples/simple" />
     <option name="IS_MODULE_SDK" value="true" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo/logo_bounce/logo_bounce.py" />
+    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/simple/main.py" />
     <option name="PARAMETERS" value="" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
