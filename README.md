@@ -4,7 +4,8 @@
 
 ```py
 
-from classy_config import BaseModel, ConfigValue, register_config
+from classy_config import ConfigValue, register_config
+from pydantic import BaseModel
 
 # Create your global config manager (example test-config.json below)
 register_config(filepath="config.toml")
