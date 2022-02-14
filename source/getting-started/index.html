@@ -218,16 +218,15 @@
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">classy_config</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">ConfigValue</span><span class="p">,</span> <span class="n">register_config</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">classy_config</span> <span class="kn">import</span> <span class="n">ConfigValue</span><span class="p">,</span> <span class="n">register_config</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
 
-<span class="c1"># Create your global config manager (example test-config.json below)</span>
+<span class="c1"># Register your config file to be used</span>
 <span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">"config.toml"</span><span class="p">)</span>
-
 
 <span class="c1"># Resolve default values based on your config</span>
 <span class="k">def</span> <span class="nf">print_current_version</span><span class="p">(</span><span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"package"</span><span class="p">,</span> <span class="nb">str</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
-
 
 <span class="c1"># Use Pydantic Models for your config</span>
 <span class="k">class</span> <span class="nc">Author</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
@@ -235,11 +234,9 @@
     <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">lucky_number</span><span class="p">:</span> <span class="nb">int</span>
 
-
 <span class="c1"># Resolve default values based on your config</span>
 <span class="k">def</span> <span class="nf">print_author</span><span class="p">(</span><span class="n">author</span><span class="p">:</span> <span class="n">Author</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"author"</span><span class="p">,</span> <span class="n">Author</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
-
 
 <span class="c1"># Allows for nested values</span>
 <span class="k">def</span> <span class="nf">print_value</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"nested.value"</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
