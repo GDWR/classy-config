@@ -1,7 +1,0 @@
-classy\_config.exceptions module
-================================
-
-.. automodule:: classy_config.exceptions
-   :members:
-   :undoc-members:
-   :show-inheritance:

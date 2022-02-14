@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>classy_config.parser.auto_parser module &mdash; Classy Config  documentation</title>
+  <title>classy_config.loader.loader module &mdash; Classy Config  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="classy_config.parser.json_parser module" href="classy_config.parser.json_parser.html" />
-    <link rel="prev" title="classy_config.parser package" href="classy_config.parser.html" /> 
+    <link rel="next" title="classy_config.loader.toml_loader module" href="classy_config.loader.toml_loader.html" />
+    <link rel="prev" title="classy_config.loader.json_loader module" href="classy_config.loader.json_loader.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,7 +44,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="classy_config.html">classy_config package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="classy_config.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="classy_config.parser.html">classy_config.parser package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="classy_config.loader.html">classy_config.loader package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="classy_config.html#submodules">Submodules</a></li>
@@ -70,10 +70,10 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">Reference</a> &raquo;</li>
           <li><a href="classy_config.html">classy_config package</a> &raquo;</li>
-          <li><a href="classy_config.parser.html">classy_config.parser package</a> &raquo;</li>
-      <li>classy_config.parser.auto_parser module</li>
+          <li><a href="classy_config.loader.html">classy_config.loader package</a> &raquo;</li>
+      <li>classy_config.loader.loader module</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/source/reference/classy_config.parser.auto_parser.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/source/reference/classy_config.loader.loader.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -81,12 +81,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-classy_config.parser.auto_parser">
-<span id="classy-config-parser-auto-parser-module"></span><h1>classy_config.parser.auto_parser module<a class="headerlink" href="#module-classy_config.parser.auto_parser" title="Permalink to this headline"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="classy_config.parser.auto_parser.auto_parser">
-<span class="sig-prename descclassname"><span class="pre">classy_config.parser.auto_parser.</span></span><span class="sig-name descname"><span class="pre">auto_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MutableMapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#classy_config.parser.auto_parser.auto_parser" title="Permalink to this definition"></a></dt>
-<dd><p>Resolve a parse using the file’s extension &amp; use it to construct a dict.</p>
+  <section id="module-classy_config.loader.loader">
+<span id="classy-config-loader-loader-module"></span><h1>classy_config.loader.loader module<a class="headerlink" href="#module-classy_config.loader.loader" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="classy_config.loader.loader.Loader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classy_config.loader.loader.</span></span><span class="sig-name descname"><span class="pre">Loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classy_config.loader.loader.Loader" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">typing_extensions.Protocol</span></code></p>
+<p>Protocol typing for a loading function.</p>
 </dd></dl>
 
 </section>
@@ -95,8 +96,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classy_config.parser.html" class="btn btn-neutral float-left" title="classy_config.parser package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classy_config.parser.json_parser.html" class="btn btn-neutral float-right" title="classy_config.parser.json_parser module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classy_config.loader.json_loader.html" class="btn btn-neutral float-left" title="classy_config.loader.json_loader module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classy_config.loader.toml_loader.html" class="btn btn-neutral float-right" title="classy_config.loader.toml_loader module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

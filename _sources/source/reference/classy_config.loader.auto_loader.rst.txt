@@ -1,7 +1,7 @@
-classy\_config.parser.toml\_parser module
+classy\_config.loader.auto\_loader module
 =========================================
 
-.. automodule:: classy_config.parser.toml_parser
+.. automodule:: classy_config.loader.auto_loader
    :members:
    :undoc-members:
    :show-inheritance:

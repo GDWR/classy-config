@@ -1,0 +1,18 @@
+classy\_config.loader package
+=============================
+
+.. automodule:: classy_config.loader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   classy_config.loader.auto_loader
+   classy_config.loader.json_loader
+   classy_config.loader.loader
+   classy_config.loader.toml_loader

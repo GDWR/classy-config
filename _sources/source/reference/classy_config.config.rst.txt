@@ -1,0 +1,7 @@
+classy\_config.config module
+============================
+
+.. automodule:: classy_config.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

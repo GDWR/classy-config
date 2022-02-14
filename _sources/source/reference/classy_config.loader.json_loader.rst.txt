@@ -1,7 +1,7 @@
-classy\_config.parser.auto\_parser module
+classy\_config.loader.json\_loader module
 =========================================
 
-.. automodule:: classy_config.parser.auto_parser
+.. automodule:: classy_config.loader.json_loader
    :members:
    :undoc-members:
    :show-inheritance:

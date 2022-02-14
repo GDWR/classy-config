@@ -12,7 +12,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   classy_config.parser
+   classy_config.loader
 
 Submodules
 ----------
@@ -20,6 +20,4 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   classy_config.classy_config
-   classy_config.config_param
-   classy_config.exceptions
+   classy_config.config
