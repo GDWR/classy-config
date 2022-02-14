@@ -62,7 +62,6 @@ jobs:
           poetry install
 
       - name: Test with pytest
-        working-directory: tests
         run: poetry run pytest --doctest-modules --junitxml=junit/test-results.xml --cov=classy_config tests/
 
       - name: Upload pytest test results
