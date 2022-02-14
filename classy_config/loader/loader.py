@@ -9,9 +9,9 @@ else:
     from typing_extensions import Protocol
 
 
-class Parser(Protocol):
-    """Protocol typing for a parsing function."""
+class Loader(Protocol):
+    """Protocol typing for a loading function."""
 
     @abstractmethod
     def __call__(self, filepath: Path) -> MutableMapping[str, Any]:
-        """Open a file, parse the contents, construct a dict & return it."""
+        """Open a file & load the contents in a dict."""

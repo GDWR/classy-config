@@ -4,7 +4,7 @@ from typing import Any, MutableMapping
 import toml
 
 
-def toml_parser(filepath: Path) -> MutableMapping[str, Any]:
-    """Open, read and construct dict from JSON file."""
+def toml_loader(filepath: Path) -> MutableMapping[str, Any]:
+    """Open and load a dict from a TOML file."""
     with filepath.open("r") as f:
         return toml.load(f)
