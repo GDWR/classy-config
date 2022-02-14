@@ -19,7 +19,7 @@
 <div align="center">
     <a href="https://pypi.org/project/classy-config/"><img alt="PyPI" src="https://img.shields.io/pypi/v/classy-config"></a>
     <a href="https://github.com/GDWR/classy-config/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-    <a href="https://pepy.tech/project/black"><img alt="Downloads" src="https://pepy.tech/badge/classy-config"></a>
+    <a href="https://pepy.tech/project/classy-config"><img alt="Downloads" src="https://pepy.tech/badge/classy-config"></a>
 </div> 
 
 ---
