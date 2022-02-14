@@ -8,7 +8,7 @@ You may wish to use a config file in a format that ``ClassyConfig`` doesn't supp
 
 Here is an example of creating a simple config loader for ``.txt`` files.
 
-.. code-block::python
+.. code-block:: python
 
     from pathlib import Path
 
