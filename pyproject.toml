@@ -15,7 +15,7 @@ pyright = "^0.0.13"
 toml = "^0.10.2"
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.0.0"
+pytest = "^7.0.1"
 flake8 = "^4.0.1"
 Sphinx = "^4.3.2"
 sphinx-rtd-theme = "^1.0.0"
