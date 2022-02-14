@@ -25,10 +25,10 @@ port=5432
 This is how they would be loaded, to run alongside each other.
 
 ```python
-from classy_config import ClassyConfig, ConfigValue
+from classy_config import register_config, ConfigValue
 
-ClassyConfig(filepath="config.toml")  # This will allow gathering of all values, as usual
-ClassyConfig(filepath="database.toml", prefix="database")  # This will allow gathering of all values, with the prefix 'database'
+register_config(filepath="config.toml")  # This will allow gathering of all values, as usual
+register_config(filepath="database.toml", prefix="database")  # This will allow gathering of all values, with the prefix 'database'
 
 app_name = ConfigValue('app_name', str)
 print(f"Starting application: {app_name}")
