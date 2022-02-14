@@ -1,8 +1,3 @@
-from pytest import fixture
+from classy_config import register_config
 
-from classy_config import ClassyConfig
-
-
-@fixture(scope="session")
-def classy_config() -> ClassyConfig:
-    return ClassyConfig(filepath="configs/test-config.toml")
+register_config(filepath="configs/test-config.toml")

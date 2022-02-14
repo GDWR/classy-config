@@ -3,7 +3,8 @@ from typing import Tuple, Type, TypeVar
 import pytest
 from pydantic import BaseModel
 
-from classy_config import ClassyConfig, ConfigParam
+from classy_config import ConfigValue
+from classy_config.config import get_raw_config
 
 T = TypeVar("T")
 
@@ -17,22 +18,28 @@ T = TypeVar("T")
         ("value4", dict)
     ]
 )
-def test_config_param(test_value: Tuple[str, Type[T]], classy_config: ClassyConfig):
+def test_config_param(test_value: Tuple[str, Type[T]]):
     config_path, config_type = test_value
-    raw_value = classy_config.raw_config[config_path]
+
+    raw_config = get_raw_config()
+    raw_value = raw_config[config_path]
+
     typed_value = config_type(raw_value)
 
-    def asset_value(value: Type[T] = ConfigParam(config_path, config_type)) -> None:
+    def asset_value(value: Type[T] = ConfigValue(config_path, config_type)) -> None:
         assert typed_value == value
 
     asset_value()
 
 
-def test_config_model(classy_config: ClassyConfig):
-    raw_value = classy_config.raw_config["GDWR"]
+def test_config_model():
+
+    raw_config = get_raw_config()
+    raw_value = raw_config["GDWR"]
+
     typed_value = User(**raw_value)
 
-    def assert_value(value: User = ConfigParam("GDWR", User)) -> None:
+    def assert_value(value: User = ConfigValue("GDWR", User)) -> None:
         assert typed_value == value
 
     assert_value()
@@ -45,39 +52,46 @@ class User(BaseModel):
     email: str
 
 
-def test_nested_config(classy_config: ClassyConfig):
-    raw_value = classy_config.raw_config["nested"]["config"]["value"]
+def test_nested_config():
+    raw_config = get_raw_config()
+    raw_value = raw_config["nested"]["config"]["value"]
 
-    def assert_value(value: str = ConfigParam("nested.config.value", str)) -> None:
+    def assert_value(value: str = ConfigValue("nested.config.value", str)) -> None:
         assert raw_value == value
 
     assert_value()
 
 
-def test_nested_config_model(classy_config: ClassyConfig):
-    raw_value = classy_config.raw_config["nested"]["config"]["GDWR"]
+def test_nested_config_model():
+    raw_config = get_raw_config()
+    raw_value = raw_config["nested"]["config"]["GDWR"]
+
     typed_value = User(**raw_value)
 
-    def assert_value(value: User = ConfigParam("nested.config.GDWR", User)) -> None:
+    def assert_value(value: User = ConfigValue("nested.config.GDWR", User)) -> None:
         assert typed_value == value
 
     assert_value()
 
 
-def test_custom_deliminator(classy_config: ClassyConfig):
-    raw_value = classy_config.raw_config["nested"]["config"]["GDWR"]
+def test_custom_deliminator():
+    raw_config = get_raw_config()
+    raw_value = raw_config["nested"]["config"]["GDWR"]
+
     typed_value = User(**raw_value)
 
-    def assert_value(value: User = ConfigParam("nested->config->GDWR", User, deliminator="->")) -> None:
+    def assert_value(value: User = ConfigValue("nested->config->GDWR", User, deliminator="->")) -> None:
         assert typed_value == value
 
     assert_value()
 
 
-def test_gather_param_inline(classy_config: ClassyConfig):
-    raw_value = classy_config.raw_config["nested"]["config"]["GDWR"]
+def test_gather_param_inline():
+    raw_config = get_raw_config()
+    raw_value = raw_config["nested"]["config"]["GDWR"]
+
     typed_value = User(**raw_value)
 
-    value = ConfigParam("nested->config->GDWR", User, deliminator="->")
+    value = ConfigValue("nested->config->GDWR", User, deliminator="->")
 
     assert typed_value == value

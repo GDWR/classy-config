@@ -1,10 +1,14 @@
-from classy_config import ClassyConfig, ConfigParam
+from classy_config import ConfigValue
+from classy_config.config import get_raw_config, register_config
 
 
-def test_nested_config(classy_config: ClassyConfig):
-    raw_value = classy_config.raw_config["nested"]["config"]["value"]
+def test_toml_config():
+    register_config(filepath="configs/test-config.toml", prefix="toml")
 
-    def assert_value(value: str = ConfigParam("nested.config.value", str)) -> None:
+    raw_config = get_raw_config()
+    raw_value = raw_config["toml"]["nested"]["config"]["value"]
+
+    def assert_value(value: str = ConfigValue("nested.config.value", str)) -> None:
         assert raw_value == value
 
     assert_value()
