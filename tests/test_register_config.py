@@ -21,7 +21,7 @@ class TestRegisterAndUseLoader:
         register_loader(".test", _stub_loader)
 
     def test_use_loader(self):
-        register_config("configs/test-config.test", prefix="test-loader")
+        register_config("tests/configs/test-config.test", prefix="test-loader")
 
     def test_loaded_values(self):
         assert ConfigValue("test-loader.value0", int) == 0

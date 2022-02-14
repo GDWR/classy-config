@@ -1,3 +1,6 @@
 dist/
 venv/
 .pytest_cache/
+
+.coverage
+junit/

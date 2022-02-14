@@ -3,7 +3,7 @@ from classy_config.config import get_raw_config, register_config
 
 
 def test_toml_config():
-    register_config(filepath="configs/test-config.toml", prefix="toml")
+    register_config(filepath="tests/configs/test-config.toml", prefix="toml")
 
     raw_config = get_raw_config()
     raw_value = raw_config["toml"]["nested"]["config"]["value"]
