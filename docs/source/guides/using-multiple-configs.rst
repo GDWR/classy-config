@@ -13,7 +13,7 @@ So for this example, we have the following two configuration files.
 
 ``config.toml``
 
-.. codeblock:: toml
+.. code-block:: toml
 
     app_name="Example App"
 
