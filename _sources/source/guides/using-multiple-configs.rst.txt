@@ -13,7 +13,7 @@ So for this example, we have the following two configuration files.
 
 ``config.toml``
 
-.. codeblock::toml
+.. codeblock:: toml
 
     app_name="Example App"
 
@@ -23,7 +23,7 @@ So for this example, we have the following two configuration files.
 
 ``database.toml``
 
-.. code-block::toml
+.. code-block:: toml
 
     host='127.0.0.1'
     port=5432
@@ -31,7 +31,7 @@ So for this example, we have the following two configuration files.
 
 This is how they could be loaded, to run alongside each other.
 
-.. code-block::python
+.. code-block:: python
 
     from classy_config import register_config, ConfigValue
 
