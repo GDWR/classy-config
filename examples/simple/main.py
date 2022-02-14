@@ -1,27 +1,27 @@
 import pygame
 
-from classy_config import ClassyConfig, ConfigParam
+from classy_config import register_config, ConfigValue
 
 # Define configuration file
-ClassyConfig(filepath="config.toml")
+register_config(filepath="config.toml")
 
 
-screen_width = ConfigParam("window.width", int)
-screen_height = ConfigParam("window.height", int)
+screen_width = ConfigValue("window.width", int)
+screen_height = ConfigValue("window.height", int)
 screen_size = screen_width, screen_height
 
 pygame.init()
 screen = pygame.display.set_mode(screen_size)
-pygame.display.set_caption(ConfigParam("window.name", str))
+pygame.display.set_caption(ConfigValue("window.name", str))
 
 
 class Logo(pygame.sprite.Sprite):
 
     def __init__(
         self,
-        size=ConfigParam("logo.size", int),
-        x_speed=ConfigParam("logo.x_speed", int),
-        y_speed=ConfigParam("logo.y_speed", int),
+        size=ConfigValue("logo.size", int),
+        x_speed=ConfigValue("logo.x_speed", int),
+        y_speed=ConfigValue("logo.y_speed", int),
     ) -> None:
 
         pygame.sprite.Sprite.__init__(self)
