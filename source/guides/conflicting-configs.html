@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="classy_config.loader.json_loader module" href="classy_config.loader.json_loader.html" /><link rel="prev" title="classy_config.loader package" href="classy_config.loader.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Custom Loaders" href="custom-loaders.html" /><link rel="prev" title="Using Multiple Configs" href="using-multiple-configs.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.3.2, furo 2022.01.02"/>
-        <title>classy_config.loader.auto_loader module - Classy Config documentation</title>
+        <title>Conflicting Configs - Classy Config documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=df49af52631e7917044a9c21a57f7b83170a6dd0" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=fade93df149f7c5fedb3ff897f799dc7d283b420" />
@@ -160,23 +160,23 @@
   <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../guides/load-your-config.html">Load your config</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guides/using-multiple-configs.html">Using Multiple Configs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guides/conflicting-configs.html">Conflicting Configs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guides/custom-loaders.html">Custom Loaders</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="load-your-config.html">Load your config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-multiple-configs.html">Using Multiple Configs</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Conflicting Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom-loaders.html">Custom Loaders</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children"><a class="reference internal" href="classy_config.html">classy_config package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 current has-children"><a class="reference internal" href="classy_config.loader.html">classy_config.loader package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">classy_config.loader.auto_loader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classy_config.loader.json_loader.html">classy_config.loader.json_loader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classy_config.loader.loader.html">classy_config.loader.loader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classy_config.loader.toml_loader.html">classy_config.loader.toml_loader module</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/classy_config.html">classy_config package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/classy_config.loader.html">classy_config.loader package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/classy_config.loader.auto_loader.html">classy_config.loader.auto_loader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/classy_config.loader.json_loader.html">classy_config.loader.json_loader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/classy_config.loader.loader.html">classy_config.loader.loader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/classy_config.loader.toml_loader.html">classy_config.loader.toml_loader module</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="classy_config.config.html">classy_config.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/classy_config.config.html">classy_config.config module</a></li>
 </ul>
 </li>
 </ul>
@@ -207,37 +207,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-classy_config.loader.auto_loader">
-<span id="classy-config-loader-auto-loader-module"></span><h1>classy_config.loader.auto_loader module<a class="headerlink" href="#module-classy_config.loader.auto_loader" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="classy_config.loader.auto_loader.auto_loader">
-<span class="sig-prename descclassname"><span class="pre">classy_config.loader.auto_loader.</span></span><span class="sig-name descname"><span class="pre">auto_loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">MutableMapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#classy_config.loader.auto_loader.auto_loader" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resolve a loader based on the file’s extension, then use loader to construct a dict.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>filepath</strong> – </p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="classy_config.loader.auto_loader.register_loader">
-<span class="sig-prename descclassname"><span class="pre">classy_config.loader.auto_loader.</span></span><span class="sig-name descname"><span class="pre">register_loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="classy_config.loader.loader.html#classy_config.loader.loader.Loader" title="classy_config.loader.loader.Loader"><span class="pre">classy_config.loader.loader.Loader</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#classy_config.loader.auto_loader.register_loader" title="Permalink to this definition">¶</a></dt>
-<dd><p>Register a loader for the auto_loader to use. This will resolve a loader from the provided extension.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>extension</strong> – The file extension this loader will be assigned to.</p></li>
-<li><p><strong>loader</strong> – The loader function.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
+          <section id="conflicting-configs">
+<h1>Conflicting Configs<a class="headerlink" href="#conflicting-configs" title="Permalink to this headline">¶</a></h1>
 </section>
 
         </article>
@@ -245,23 +216,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="classy_config.loader.json_loader.html">
+          <a class="next-page" href="custom-loaders.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">classy_config.loader.json_loader module</div>
+                <div class="title">Custom Loaders</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="classy_config.loader.html">
+          <a class="prev-page" href="using-multiple-configs.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">classy_config.loader package</div>
+                <div class="title">Using Multiple Configs</div>
                 
               </div>
             </a>
@@ -271,7 +242,7 @@
               Copyright &#169; 2022, GDWR |
           Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
           <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
-            | <a class="muted-link" href="../../_sources/source/reference/classy_config.loader.auto_loader.rst.txt"
+            | <a class="muted-link" href="../../_sources/source/guides/conflicting-configs.rst.txt"
                rel="nofollow">
               Show Source
             </a>
