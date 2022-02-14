@@ -16,16 +16,15 @@ Usage
 
 .. code-block:: python
 
-    from classy_config import BaseModel, ConfigValue, register_config
+    from classy_config import ConfigValue, register_config
+    from pydantic import BaseModel
 
-    # Create your global config manager (example test-config.json below)
+    # Register your config file to be used
     register_config(filepath="config.toml")
-
 
     # Resolve default values based on your config
     def print_current_version(version: str = ConfigValue("package", str)) -> None:
         print(version)
-
 
     # Use Pydantic Models for your config
     class Author(BaseModel):
@@ -33,11 +32,9 @@ Usage
         email: str
         lucky_number: int
 
-
     # Resolve default values based on your config
     def print_author(author: Author = ConfigValue("author", Author)) -> None:
         print(author)
-
 
     # Allows for nested values
     def print_value(value: int = ConfigValue("nested.value", int)) -> None:
