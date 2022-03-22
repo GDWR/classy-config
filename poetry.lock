@@ -167,7 +167,7 @@ pycodestyle = "*"
 
 [[package]]
 name = "flake8-bugbear"
-version = "22.1.11"
+version = "22.3.20"
 description = "A plugin for flake8 finding likely bugs and design problems in your program. Contains warnings that don't belong in pyflakes and pycodestyle."
 category = "dev"
 optional = false
@@ -227,7 +227,7 @@ flake8 = "*"
 
 [[package]]
 name = "furo"
-version = "2022.1.2"
+version = "2022.3.4"
 description = "A clean customisable Sphinx documentation theme."
 category = "dev"
 optional = false
@@ -237,10 +237,6 @@ python-versions = ">=3.6"
 beautifulsoup4 = "*"
 pygments = ">=2.7,<3.0"
 sphinx = ">=4.0,<5.0"
-
-[package.extras]
-test = ["pytest", "pytest-cov", "pytest-xdist"]
-doc = ["myst-parser", "sphinx-copybutton", "sphinx-design", "sphinx-inline-tabs"]
 
 [[package]]
 name = "gitdb"
@@ -798,7 +794,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.2"
-content-hash = "ea85e660344af5c81f9c39e2ba258fb67aeebd5f4610de51eb1f9c7bc01ff614"
+content-hash = "3b76e7241b1cb7230e538dd31f055228358b30875fac0090f6352666ebcdc6c0"
 
 [metadata.files]
 alabaster = [
@@ -906,8 +902,8 @@ flake8-bandit = [
     {file = "flake8_bandit-2.1.2.tar.gz", hash = "sha256:687fc8da2e4a239b206af2e54a90093572a60d0954f3054e23690739b0b0de3b"},
 ]
 flake8-bugbear = [
-    {file = "flake8-bugbear-22.1.11.tar.gz", hash = "sha256:4c2a4136bd4ecb8bf02d5159af302ffc067642784c9d0488b33ce4610da825ee"},
-    {file = "flake8_bugbear-22.1.11-py3-none-any.whl", hash = "sha256:ce7ae44aaaf67ef192b8a6de94a5ac617144e1675ad0654fdea556f48dc18d9b"},
+    {file = "flake8-bugbear-22.3.20.tar.gz", hash = "sha256:152e64a86f6bff6e295d630ccc993f62434c1fd2b20d2fae47547cb1c1b868e0"},
+    {file = "flake8_bugbear-22.3.20-py3-none-any.whl", hash = "sha256:19fe179ee3286e16198603c438788e2949e79f31d653f0bdb56d53fb69217bd0"},
 ]
 flake8-docstrings = [
     {file = "flake8-docstrings-1.6.0.tar.gz", hash = "sha256:9fe7c6a306064af8e62a055c2f61e9eb1da55f84bb39caef2b84ce53708ac34b"},
@@ -926,8 +922,8 @@ flake8-string-format = [
     {file = "flake8_string_format-0.3.0-py2.py3-none-any.whl", hash = "sha256:812ff431f10576a74c89be4e85b8e075a705be39bc40c4b4278b5b13e2afa9af"},
 ]
 furo = [
-    {file = "furo-2022.1.2-py3-none-any.whl", hash = "sha256:958016bfe1387c1e8ddf5b9d71696b69c4eaa5cd8afc9492abfb008aba2d300c"},
-    {file = "furo-2022.1.2.tar.gz", hash = "sha256:b217f218cbcd423ffbfe69baa79389d4ecebf2d86f0d593c44ef31da7b5aed30"},
+    {file = "furo-2022.3.4-py3-none-any.whl", hash = "sha256:6c718293ebf87755f0b9f148b1e697c9e3aabd7af955644d4bcaee5ce75db781"},
+    {file = "furo-2022.3.4.tar.gz", hash = "sha256:7660267cc67b2828fd0e17bc07adeb612c47b2eba5a6de07049a1569e6044aa8"},
 ]
 gitdb = [
     {file = "gitdb-4.0.9-py3-none-any.whl", hash = "sha256:8033ad4e853066ba6ca92050b9df2f89301b8fc8bf7e9324d412a63f8bf1a8fd"},

@@ -1,9 +1,7 @@
 <div align="center">
     <img align="center" src="https://raw.githubusercontent.com/GDWR/classy-config/main/docs/favicon.ico" alt="ClassyConfig Logo">
+    <h1 align="center">ClassyConfig</h1>
 </div>
-
-
-<h2 align="center">ClassyConfig</h2>
 
 <div align="center">
     <strong>ClassyConfig</strong> is a Python3 package aiming to remove the need for a <strong>config.py</strong> or <strong>settings.py</strong> file.
