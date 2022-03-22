@@ -209,6 +209,20 @@
         <article role="main">
           <section id="conflicting-configs">
 <h1>Conflicting Configs<a class="headerlink" href="#conflicting-configs" title="Permalink to this headline">#</a></h1>
+<p>When using multiple configs, this leaves the opportunity of clashing config keys.</p>
+<dl class="simple">
+<dt>When two keys clash in value there are few things that can happen:</dt><dd><ul class="simple">
+<li><p>If one of the two values isn’t a object/dict, the newest value is dropped.</p></li>
+<li><dl class="simple">
+<dt>If both values are object/dict, they will be recursively merged.</dt><dd><ul>
+<li><p>If there is a conflicting key, that don’t share the same value. A ValueError is raised.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
 </section>
 
         </article>

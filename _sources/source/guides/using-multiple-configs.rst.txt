@@ -17,9 +17,6 @@ So for this example, we have the following two configuration files.
 
     app_name="Example App"
 
-    [database]
-    port=2345
-
 
 ``database.toml``
 
