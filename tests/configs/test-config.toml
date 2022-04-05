@@ -8,16 +8,16 @@ arb="strings"
 and=123
 
 [GDWR]
-name="Greg"
-age=22
-email="gregory.dwr@gmail.com"
+name="Jeff"
+age=34
+email="jeff@gmail.com"
 alive=true
 
 [nested.config]
 value="Banana"
 
 [nested.config.GDWR]
-name="Greg"
-age=22
-email="gregory.dwr@gmail.com"
-alive=true
+name="Geoff"
+age=26
+email="geoff@gmail.com"
+alive=false
