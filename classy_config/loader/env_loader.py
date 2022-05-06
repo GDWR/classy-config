@@ -1,6 +1,6 @@
 from os import environ
 from pathlib import Path
-from typing import Any, MutableMapping
+from typing import MutableMapping
 
 from dotenv import load_dotenv
 
