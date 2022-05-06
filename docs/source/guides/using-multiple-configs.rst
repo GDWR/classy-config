@@ -22,7 +22,7 @@ So for this example, we have the following two configuration files.
 
 .. code-block:: toml
 
-    host='127.0.0.1'
+    host="127.0.0.1"
     port=5432
 
 
@@ -35,11 +35,11 @@ This is how they could be loaded, to run alongside each other.
     register_config(filepath="config.toml")  # This will allow gathering of all values, as usual
     register_config(filepath="database.toml", prefix="database")  # This will allow gathering of all values, with the prefix 'database'
 
-    app_name = ConfigValue('app_name', str)
+    app_name = ConfigValue("app_name", str)
     print(f"Starting application: {app_name}")
 
-    database_host = ConfigValue('database.host', str)
-    database_port = ConfigValue('database.port', int)
+    database_host = ConfigValue("db.host", str)
+    database_port = ConfigValue("db.port", int)
     print(f"Connecting to database: {database_host}:{database_port}")
 
 
