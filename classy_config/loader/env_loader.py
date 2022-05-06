@@ -5,7 +5,7 @@ from typing import Any, MutableMapping
 from dotenv import load_dotenv
 
 
-def env_loader(filepath: Path) ->  MutableMapping[str, Any]:
+def env_loader(filepath: Path) -> MutableMapping[str, Any]:
     """
     Load the given *.env file and the user's environment variables.
 
