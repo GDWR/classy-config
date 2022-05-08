@@ -8,7 +8,8 @@ exclude=
     .md,.svg,.png
     tests,
     venv,.venv,
-    __init__.py
+    __init__.py,
+    examples/
 
 ignore=
 
