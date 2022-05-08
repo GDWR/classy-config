@@ -1,5 +1,5 @@
 from classy_config import ConfigValue
-from classy_config.config import get_raw_config, register_config
+from classy_config.config import register_config
 
 test_values = [
     "1",
