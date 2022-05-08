@@ -15,7 +15,6 @@ def env_loader(filepath: Path) -> MutableMapping[str, str]:
     :param filepath: The path of the file to load from.
     :return: The mapping of keys to value loaded from the env file and user's environment.
     """
-    if filepath:
-        load_dotenv(filepath)
+    load_dotenv(filepath)
 
     return environ
