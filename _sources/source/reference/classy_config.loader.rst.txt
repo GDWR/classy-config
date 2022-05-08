@@ -13,6 +13,7 @@ Submodules
    :maxdepth: 4
 
    classy_config.loader.auto_loader
+   classy_config.loader.env_loader
    classy_config.loader.json_loader
    classy_config.loader.loader
    classy_config.loader.toml_loader
