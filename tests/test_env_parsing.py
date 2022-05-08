@@ -11,5 +11,5 @@ test_values = [
 def test_env_config():
     register_config(filepath="tests/configs/test-config.env", prefix="env")
 
-    for count, test_val in enumerate(test_values):
-        assert ConfigValue(f"env.test_{count + 1}", str) == test_val
+    for count, test_val in enumerate(test_values, start=1):
+        assert ConfigValue(f"env.test_{count}", str) == test_val
