@@ -20,7 +20,7 @@ def auto_loader(filepath: Path) -> MutableMapping[str, Any]:
     :param filepath:
     :return:
     """
-    resolved_parser = __parser_mapping[filepath.suffix]
+    resolved_parser = __parser_mapping[filepath.suffix or filepath.stem]
     return resolved_parser(filepath)
 
 
