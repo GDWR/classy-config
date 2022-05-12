@@ -33,7 +33,7 @@ def register_config(
     if isinstance(filepath, str):
         filepath = Path(filepath)
 
-    if not filepath.exists():
+    if not filepath.match("*.env") and not filepath.exists():
         raise FileNotFoundError(filepath)
 
     raw_config = loader(filepath)
