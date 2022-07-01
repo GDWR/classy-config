@@ -1,7 +1,7 @@
-Load your config
+Load Your Config
 ================
 
-ClassyConfig makes loading you config simple.
+ClassyConfig makes loading your config simple:
 
 .. code-block:: python
 
@@ -9,7 +9,8 @@ ClassyConfig makes loading you config simple.
 
     register_config(filepath="config.toml")
 
-Now you have registered your config, any usage of ``ConfigValue`` will be resolved from the config.
+Now that you have registered your config, any usage of ``ConfigValue``
+will be resolved from the registered config file:
 
 .. code-block:: python
 

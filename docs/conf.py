@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Classy Config'
+project = 'ClassyConfig'
 copyright = '2022, GDWR'
 author = 'GDWR'
 

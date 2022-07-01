@@ -4,7 +4,8 @@ Getting Started
 Installation
 *************
 
-ClassyConfig is available on `pipy <https://pypi.org/project/classy-config/>`_, this will allow you to use ``pip`` to install ClassyConfig.
+ClassyConfig is available on `pypi <https://pypi.org/project/classy-config/>`_,
+making it easy to install via ``pip``:
 
 .. code-block::
 

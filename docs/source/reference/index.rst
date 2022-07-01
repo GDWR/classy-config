@@ -12,5 +12,3 @@ Subpackages
 
 .. toctree::
    :maxdepth: 4
-
-   classy_config.loader
