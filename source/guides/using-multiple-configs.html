@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Conflicting Configs" href="conflicting-configs.html" /><link rel="prev" title="Load your config" href="load-your-config.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Conflicting Configs" href="conflicting-configs.html" /><link rel="prev" title="Load Your Config" href="load-your-config.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.3.2, furo 2022.04.07"/>
-        <title>Using Multiple Configs - Classy Config documentation</title>
+        <title>Using Multiple Configs - ClassyConfig documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">Classy Config  documentation</div></a>
+      <a href="../../index.html"><div class="brand">ClassyConfig  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -149,7 +149,7 @@
     <img class="sidebar-logo" src="../../_static/favicon.ico" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Classy Config  documentation</span>
+  <span class="sidebar-brand-text">ClassyConfig  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -161,21 +161,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="load-your-config.html">Load your config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load-your-config.html">Load Your Config</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Using Multiple Configs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conflicting-configs.html">Conflicting Configs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom-loaders.html">Custom Loaders</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/classy_config.loader.html">classy_config.loader package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../reference/classy_config.loader.auto_loader.html">classy_config.loader.auto_loader module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/classy_config.loader.env_loader.html">classy_config.loader.env_loader module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/classy_config.loader.json_loader.html">classy_config.loader.json_loader module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/classy_config.loader.loader.html">classy_config.loader.loader module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/classy_config.loader.toml_loader.html">classy_config.loader.toml_loader module</a></li>
-</ul>
-</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -213,31 +205,33 @@
           <section id="using-multiple-configs">
 <h1>Using Multiple Configs<a class="headerlink" href="#using-multiple-configs" title="Permalink to this headline">#</a></h1>
 <p><a class="reference external" href="https://github.com/GDWR/classy-config/tree/main/examples/multiple_configs">View on GitHub</a></p>
-<p>There maybe a time were having multiple config files would allow for cleaner deployment,
-readability and/or maintainability.</p>
-<p>To accommodate this, <code class="docutils literal notranslate"><span class="pre">ClassyConfig</span></code> allows you to prefix your config files to allow them to be
-used alongside each other.</p>
-<p>So for this example, we have the following two configuration files.</p>
+<p>There are times when having multiple config files would allow for cleaner deployment,
+readability, and maintainability of your code base.</p>
+<p>To accommodate this, <code class="docutils literal notranslate"><span class="pre">ClassyConfig</span></code> allows you to load multiple config files
+with designated prefixes, so you can use all the config values alongside each other.</p>
+<p>For example, we have the following two separate configuration files:</p>
 <p><code class="docutils literal notranslate"><span class="pre">config.toml</span></code></p>
 <div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">app_name</span><span class="o">=</span><span class="s">"Example App"</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">database.toml</span></code></p>
-<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">host</span><span class="o">=</span><span class="s">'127.0.0.1'</span><span class="w"></span>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">host</span><span class="o">=</span><span class="s">"127.0.0.1"</span><span class="w"></span>
 <span class="n">port</span><span class="o">=</span><span class="mi">5432</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This is how they could be loaded, to run alongside each other.</p>
+<p>First, load your two configuration files. We’ll use the prefix of <code class="docutils literal notranslate"><span class="pre">"db"</span></code> for the second one:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">classy_config</span> <span class="kn">import</span> <span class="n">register_config</span><span class="p">,</span> <span class="n">ConfigValue</span>
 
-<span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">"config.toml"</span><span class="p">)</span>  <span class="c1"># This will allow gathering of all values, as usual</span>
-<span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">"database.toml"</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">"database"</span><span class="p">)</span>  <span class="c1"># This will allow gathering of all values, with the prefix 'database'</span>
-
-<span class="n">app_name</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s1">'app_name'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">"config.toml"</span><span class="p">)</span>
+<span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">"database.toml"</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">"db"</span><span class="p">)</span>  <span class="c1"># Note the prefix</span>
+</pre></div>
+</div>
+<p>Now use your config values from both files with ease:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app_name</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"app_name"</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Starting application: </span><span class="si">{</span><span class="n">app_name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-<span class="n">database_host</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s1">'database.host'</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-<span class="n">database_port</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s1">'database.port'</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+<span class="n">database_host</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"db.host"</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">database_port</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"db.port"</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Connecting to database: </span><span class="si">{</span><span class="n">database_host</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">database_port</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -264,7 +258,7 @@ used alongside each other.</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Load your config</div>
+                <div class="title">Load Your Config</div>
                 
               </div>
             </a>
