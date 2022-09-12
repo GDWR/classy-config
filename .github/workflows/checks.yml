@@ -2,10 +2,7 @@ name: Checks
 
 on:
   pull_request:
-      types: [opened, reopened, synchronize, ready_for_review]
-      paths:
-        - 'classy_config/**'
-        - 'tests/**'
+
   push:
     branches:
       - main
@@ -16,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: ["3.8, "3.10"]
+        python-version: ["3.8", "3.10"]
 
     steps:
 
