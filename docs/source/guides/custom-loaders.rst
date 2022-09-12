@@ -29,5 +29,5 @@ Here is an example of creating a simple config loader for ``.txt`` files.
     register_loader(".txt", txt_loader)
     register_config("config.txt")
 
-    print(f"data: {ConfigValue("data", int)}")
-    print(f"name: {ConfigValue("name", str)}")
+    print(f"data: {ConfigValue('data', int)}")
+    print(f"name: {ConfigValue('name', str)}")
