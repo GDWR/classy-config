@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Guides" href="../guides/index.html" /><link rel="prev" title="Introduction" href="../../index.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.3.2, furo 2022.04.07"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.3.2, furo 2022.06.21"/>
         <title>Getting Started - ClassyConfig documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -188,7 +188,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -218,10 +219,10 @@ making it easy to install via <code class="docutils literal notranslate"><span c
 <span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
 
 <span class="c1"># Register your config file to be used</span>
-<span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">"config.toml"</span><span class="p">)</span>
+<span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">&quot;config.toml&quot;</span><span class="p">)</span>
 
 <span class="c1"># Resolve default values based on your config</span>
-<span class="k">def</span> <span class="nf">print_current_version</span><span class="p">(</span><span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"package"</span><span class="p">,</span> <span class="nb">str</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">print_current_version</span><span class="p">(</span><span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">&quot;package&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 
 <span class="c1"># Use Pydantic Models for your config</span>
@@ -231,11 +232,11 @@ making it easy to install via <code class="docutils literal notranslate"><span c
     <span class="n">lucky_number</span><span class="p">:</span> <span class="nb">int</span>
 
 <span class="c1"># Resolve default values based on your config</span>
-<span class="k">def</span> <span class="nf">print_author</span><span class="p">(</span><span class="n">author</span><span class="p">:</span> <span class="n">Author</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"author"</span><span class="p">,</span> <span class="n">Author</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">print_author</span><span class="p">(</span><span class="n">author</span><span class="p">:</span> <span class="n">Author</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">&quot;author&quot;</span><span class="p">,</span> <span class="n">Author</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
 
 <span class="c1"># Allows for nested values</span>
-<span class="k">def</span> <span class="nf">print_value</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">"nested.value"</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">print_value</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">ConfigValue</span><span class="p">(</span><span class="s2">&quot;nested.value&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 </pre></div>
 </div>
