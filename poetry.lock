@@ -341,11 +341,11 @@ python-versions = ">=2.6"
 
 [[package]]
 name = "pep8-naming"
-version = "0.13.1"
+version = "0.13.2"
 description = "Check PEP-8 naming conventions, plugin for flake8"
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 
 [package.dependencies]
 flake8 = ">=3.9.1"
@@ -776,7 +776,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "507afc87dde06af2d4499d136e0606797a9d0860545efb2e5be9be4cde225dc3"
+content-hash = "1b9e517af8dd374c4e20c486d8e3feffafdbf3ea2e78c77759d8bd676239ba99"
 
 [metadata.files]
 alabaster = [
@@ -1016,8 +1016,8 @@ pbr = [
     {file = "pbr-5.9.0.tar.gz", hash = "sha256:e8dca2f4b43560edef58813969f52a56cef023146cbb8931626db80e6c1c4308"},
 ]
 pep8-naming = [
-    {file = "pep8-naming-0.13.1.tar.gz", hash = "sha256:3af77cdaa9c7965f7c85a56cd579354553c9bbd3fdf3078a776f12db54dd6944"},
-    {file = "pep8_naming-0.13.1-py3-none-any.whl", hash = "sha256:f7867c1a464fe769be4f972ef7b79d6df1d9aff1b1f04ecf738d471963d3ab9c"},
+    {file = "pep8-naming-0.13.2.tar.gz", hash = "sha256:93eef62f525fd12a6f8c98f4dcc17fa70baae2f37fa1f73bec00e3e44392fa48"},
+    {file = "pep8_naming-0.13.2-py3-none-any.whl", hash = "sha256:59e29e55c478db69cffbe14ab24b5bd2cd615c0413edf790d47d3fb7ba9a4e23"},
 ]
 pluggy = [
     {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3"},
