@@ -1,11 +1,11 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.3.2, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>classy_config package - ClassyConfig documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -204,17 +204,17 @@
         </div>
         <article role="main">
           <section id="module-classy_config">
-<span id="classy-config-package"></span><h1>classy_config package<a class="headerlink" href="#module-classy_config" title="Permalink to this headline">#</a></h1>
+<span id="classy-config-package"></span><h1>classy_config package<a class="headerlink" href="#module-classy_config" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="classy_config.ConfigValue">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">ConfigValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">classy_config.config.T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deliminator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classy_config.ConfigValue" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">ConfigValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deliminator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classy_config.ConfigValue" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Resolve to a value defined within the config.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="classy_config.register_config">
-<span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">register_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">filepath:</span> <span class="pre">Union[str,</span> <span class="pre">pathlib.Path],</span> <span class="pre">prefix:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">loader:</span> <span class="pre">classy_config.loader.loader.Loader</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">auto_loader&gt;,</span> <span class="pre">strict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#classy_config.register_config" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">register_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">filepath:</span> <span class="pre">~typing.Union[str,</span> <span class="pre">~pathlib.Path],</span> <span class="pre">prefix:</span> <span class="pre">~typing.Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">loader:</span> <span class="pre">~classy_config.loader.loader.Loader</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">auto_loader&gt;,</span> <span class="pre">strict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#classy_config.register_config" title="Permalink to this definition">#</a></dt>
 <dd><p>Register a config file to load from.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -235,7 +235,7 @@ If not strict, duplicate keys will attempt to be merged if both values are dicts
 
 <dl class="py function">
 <dt class="sig sig-object py" id="classy_config.register_loader">
-<span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">register_loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="classy_config.loader.loader.html#classy_config.loader.loader.Loader" title="classy_config.loader.loader.Loader"><span class="pre">classy_config.loader.loader.Loader</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#classy_config.register_loader" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">register_loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="classy_config.loader.loader.html#classy_config.loader.loader.Loader" title="classy_config.loader.loader.Loader"><span class="pre">Loader</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#classy_config.register_loader" title="Permalink to this definition">#</a></dt>
 <dd><p>Register a loader for the auto_loader to use. This will resolve a loader from the provided extension.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -251,7 +251,7 @@ If not strict, duplicate keys will attempt to be merged if both values are dicts
 </dd></dl>
 
 <section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">#</a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="classy_config.loader.html">classy_config.loader package</a><ul>
@@ -269,7 +269,7 @@ If not strict, duplicate keys will attempt to be merged if both values are dicts
 </div>
 </section>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="classy_config.config.html">classy_config.config module</a></li>
@@ -334,6 +334,7 @@ If not strict, duplicate keys will attempt to be merged if both values are dicts
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
     </body>
