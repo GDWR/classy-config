@@ -15,11 +15,11 @@ toml = "^0.10.2"
 python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
-pyright = "^0.0.13"
+pyright = "^1.1.270"
 pytest = "^7.0.1"
 pytest-cov = "^3.0.0"
 flake8 = "^4.0.1"
-Sphinx = "^4.3.2"
+Sphinx = "^4.5.0"
 sphinxcontrib-napoleon = "^0.7"
 flake8-annotations = "^2.7.0"
 flake8-bandit = "^3.0.0"
