@@ -141,7 +141,7 @@ flake8 = ">=3.7"
 
 [[package]]
 name = "flake8-bandit"
-version = "3.0.0"
+version = "4.1.1"
 description = "Automated security testing with bandit and flake8."
 category = "dev"
 optional = false
@@ -149,9 +149,7 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 bandit = ">=1.7.3"
-flake8 = "*"
-flake8-polyfill = "*"
-pycodestyle = "*"
+flake8 = ">=5.0.0"
 
 [[package]]
 name = "flake8-bugbear"
@@ -191,17 +189,6 @@ python-versions = "*"
 [package.dependencies]
 pycodestyle = "*"
 setuptools = "*"
-
-[[package]]
-name = "flake8-polyfill"
-version = "1.0.2"
-description = "Polyfill package for Flake8 plugins"
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-flake8 = "*"
 
 [[package]]
 name = "flake8-string-format"
@@ -805,7 +792,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "7188a323c5bdd70ead5a591752fe299afcebb1f7a33bea4586ee3cbc8066cd4f"
+content-hash = "a110eba75b09196bb1d46e07a1031ef29f601568a361af4a3982cd2fd47bc676"
 
 [metadata.files]
 alabaster = [
@@ -902,8 +889,8 @@ flake8-annotations = [
     {file = "flake8_annotations-2.9.1-py3-none-any.whl", hash = "sha256:a4385158a7a9fc8af1d8820a2f4c8d03387997006a83f5f8bfe5bc6085bdf88a"},
 ]
 flake8-bandit = [
-    {file = "flake8_bandit-3.0.0-py2.py3-none-any.whl", hash = "sha256:61b617f4f7cdaa0e2b1e6bf7b68afb2b619a227bb3e3ae00dd36c213bd17900a"},
-    {file = "flake8_bandit-3.0.0.tar.gz", hash = "sha256:54d19427e6a8d50322a7b02e1841c0a7c22d856975f3459803320e0e18e2d6a1"},
+    {file = "flake8_bandit-4.1.1-py3-none-any.whl", hash = "sha256:4c8a53eb48f23d4ef1e59293657181a3c989d0077c9952717e98a0eace43e06d"},
+    {file = "flake8_bandit-4.1.1.tar.gz", hash = "sha256:068e09287189cbfd7f986e92605adea2067630b75380c6b5733dab7d87f9a84e"},
 ]
 flake8-bugbear = [
     {file = "flake8-bugbear-22.9.11.tar.gz", hash = "sha256:39236c0e97160d1ab05d9f87422173d16e925a6220b3635bfc4aee766bf8194a"},
@@ -916,10 +903,6 @@ flake8-docstrings = [
 flake8-import-order = [
     {file = "flake8-import-order-0.18.1.tar.gz", hash = "sha256:a28dc39545ea4606c1ac3c24e9d05c849c6e5444a50fb7e9cdd430fc94de6e92"},
     {file = "flake8_import_order-0.18.1-py2.py3-none-any.whl", hash = "sha256:90a80e46886259b9c396b578d75c749801a41ee969a235e163cfe1be7afd2543"},
-]
-flake8-polyfill = [
-    {file = "flake8-polyfill-1.0.2.tar.gz", hash = "sha256:e44b087597f6da52ec6393a709e7108b2905317d0c0b744cdca6208e670d8eda"},
-    {file = "flake8_polyfill-1.0.2-py2.py3-none-any.whl", hash = "sha256:12be6a34ee3ab795b19ca73505e7b55826d5f6ad7230d31b18e106400169b9e9"},
 ]
 flake8-string-format = [
     {file = "flake8-string-format-0.3.0.tar.gz", hash = "sha256:65f3da786a1461ef77fca3780b314edb2853c377f2e35069723348c8917deaa2"},
