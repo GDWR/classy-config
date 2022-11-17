@@ -15,7 +15,7 @@ toml = "^0.10.2"
 python-dotenv = ">=0.20,<0.22"
 
 [tool.poetry.dev-dependencies]
-pyright = "^1.1.279"
+pyright = "^1.1.280"
 pytest = "^7.2.0"
 pytest-cov = "^4.0.0"
 flake8 = "^5.0.4"
