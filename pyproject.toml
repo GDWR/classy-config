@@ -28,7 +28,7 @@ flake8-docstrings = "^1.6.0"
 flake8-import-order = "^0.18.1"
 flake8-string-format = "^0.3.0"
 pep8-naming = "^0.13.2"
-furo = "^2022.9.29"
+furo = "^2022.12.7"
 
 [tool.pyright]
 include = ["classy_config"]
