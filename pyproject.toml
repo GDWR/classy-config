@@ -16,7 +16,7 @@ python-dotenv = ">=0.20,<0.22"
 
 [tool.poetry.dev-dependencies]
 pyright = "^1.1.288"
-pytest = "^7.2.0"
+pytest = "^7.2.1"
 pytest-cov = "^4.0.0"
 flake8 = "^5.0.4"
 Sphinx = "^5.3.0"
