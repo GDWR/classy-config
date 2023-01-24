@@ -765,14 +765,14 @@ diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
 name = "pyright"
-version = "1.1.288"
+version = "1.1.290"
 description = "Command line wrapper for pyright"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pyright-1.1.288-py3-none-any.whl", hash = "sha256:ab5da004e2de3b0567c685aa8d38bba68d872b1b4a20f1013400ace571a7efc7"},
-    {file = "pyright-1.1.288.tar.gz", hash = "sha256:c45594c5833b01d5125bc291d2498d4ed0f2c2e3dd4fd8236fbdaf597099f617"},
+    {file = "pyright-1.1.290-py3-none-any.whl", hash = "sha256:c1a57ad812f740fc7fb6bb416cd7e3f46f4e88384c723192402a77e2e756b550"},
+    {file = "pyright-1.1.290.tar.gz", hash = "sha256:956d8efc70eb5a54da54c82feef842affd3a81719c8864769cd196e211961e3a"},
 ]
 
 [package.dependencies]
@@ -1257,4 +1257,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "36ac36fb96b4e1b28c8e6490e8e2efc17e0e92e9390241c9e6cc204e32b6bbb0"
+content-hash = "2977071d12f4b59961f7dd7934d342dc2d5e4a31198b20513ba23e77c0a98884"
