@@ -2,6 +2,8 @@ import pytest
 
 from classy_config._util import merge_dicts
 
+def test_fail():
+    assert False
 
 def test_simple_merge_dicts():
     dict_one = {"1": 1, "2": 2}
