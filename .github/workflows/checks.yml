@@ -16,7 +16,6 @@ jobs:
         python-version: ["3.8", "3.10", "3.12"]
 
     steps:
-
       - uses: actions/checkout@v2
 
       - name: Set up Python ${{ matrix.python-version }}
@@ -32,7 +31,6 @@ jobs:
 
       - name: Analyse code with flake8
         run: poetry run flake8 classy_config/ -j 0
-          
 
       - name: Analysing code with pyright
         run: poetry run pyright classy_config/
@@ -43,14 +41,12 @@ jobs:
       matrix:
         python-version: ["3.8", "3.10", "3.12"]
     steps:
-
       - uses: actions/checkout@v2
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-
 
       - name: Install dependencies
         run: |
