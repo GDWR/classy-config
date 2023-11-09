@@ -61,3 +61,4 @@ def print_author(author: Author = ConfigValue("author", Author)) -> None:
 def print_value(value: int = ConfigValue("nested.value", int)) -> None:
     print(value)
 ```
+
