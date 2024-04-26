@@ -13,12 +13,13 @@
 import os
 import sys
 
+from datetime import datetime
+
 sys.path.insert(0, os.path.abspath('../'))
 
 # -- Project information -----------------------------------------------------
-
 project = 'ClassyConfig'
-copyright = '2022, GDWR'
+copyright = f'{datetime.utcnow():%Y}, GDWR'
 author = 'GDWR'
 
 # -- General configuration ---------------------------------------------------
