@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "classy_config"
-version = "0.6.1"
+version = "0.7.0"
 description = "ClassyConfig is a Python3 package aiming to remove the need for a config.py or settings.py file."
 readme = "README.md"
 repository = "https://github.com/GDWR/classy-config"
