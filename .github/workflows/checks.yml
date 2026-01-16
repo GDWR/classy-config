@@ -62,7 +62,7 @@ jobs:
         run: poetry run pytest --doctest-modules --junitxml=junit/test-results.xml --cov=classy_config tests/
 
       - name: Upload pytest test results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         if: ${{ always() }}  # Use always() to always run this step to publish test results when there are test failures
         with:
           name: checks
