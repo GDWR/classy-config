@@ -14,7 +14,7 @@ exclude=
 ignore=
 
     # Docstrings
-    C0114, D100, D107, D203, D212
+    D100, D107, D203, D212
 
     # Annotations
     ANN101, ANN002, ANN003
