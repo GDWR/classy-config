@@ -69,7 +69,7 @@ T = TypeVar("T")
 
 
 class _ResolveFromConfig(type):
-    def __call__(cls, variable_path: str, _type: Type[T], deliminator: str = ".") -> T:
+    def __call__(cls, variable_path: str, type_: Callable[[], T], deliminator: str = ".") -> T:
 
         config_value_path = variable_path.split(deliminator)
 
@@ -81,12 +81,12 @@ class _ResolveFromConfig(type):
             except KeyError:
                 raise KeyError(f"Config: {variable_path} does not exist")
 
-        if get_origin(_type) in (List, Dict):
-            return _type(data)
+        if get_origin(type_) in (List, Dict):
+            return type_(data)
         if issubclass(_type, BaseModel):
-            return _type(**data)
+            return type_(**data)
         else:
-            return _type(data)
+            return type_(data)
 
 
 class ConfigValue(metaclass=_ResolveFromConfig):
