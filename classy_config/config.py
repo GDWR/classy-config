@@ -10,7 +10,7 @@ from .loader import Loader, auto_loader
 
 logger = getLogger(__name__)
 
-_config: MutableMapping[str, Any] = {}
+_config: dict[str, Any] = {}
 
 
 def register_config(
