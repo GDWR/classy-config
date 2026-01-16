@@ -14,10 +14,10 @@ jobs:
   create-documentation:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
@@ -37,14 +37,14 @@ jobs:
         touch build/html/.nojekyll
 
     - name: Documentation Artifacts
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v4
       with:
         name: documentation
         path: |
           docs/build/html/*
 
     - name: Deploy Page
-      uses: JamesIves/github-pages-deploy-action@v4.2.2
+      uses: JamesIves/github-pages-deploy-action@releases/v4
       if: github.ref == 'refs/heads/main'
       with:
         branch: gh-pages

@@ -17,10 +17,10 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -44,10 +44,10 @@ jobs:
         python-version: ["3.10", "3.12"]
     steps:
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -62,7 +62,7 @@ jobs:
         run: poetry run pytest --doctest-modules --junitxml=junit/test-results.xml --cov=classy_config tests/
 
       - name: Upload pytest test results
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v4
         if: ${{ always() }}  # Use always() to always run this step to publish test results when there are test failures
         with:
           name: checks_${{ matrix.python-version }}
