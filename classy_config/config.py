@@ -1,6 +1,6 @@
 from logging import getLogger
 from pathlib import Path
-from typing import Any, Dict, List, MutableMapping, Optional, Type, TypeVar, Union
+from typing import Any, Callable, Dict, List, MutableMapping, Optional, Type, TypeVar, Union
 
 from pydantic import BaseModel
 from typing_inspect import get_origin
@@ -83,7 +83,7 @@ class _ResolveFromConfig(type):
 
         if get_origin(type_) in (List, Dict):
             return type_(data)
-        if issubclass(_type, BaseModel):
+        if issubclass(type_, BaseModel):
             return type_(**data)
         else:
             return type_(data)
