@@ -204,53 +204,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-classy_config">
-<span id="classy-config-package"></span><h1>classy_config package<a class="headerlink" href="#module-classy_config" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="classy_config.ConfigValue">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">ConfigValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deliminator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classy_config.ConfigValue" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Resolve to a value defined within the config.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="classy_config.register_config">
-<span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">register_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader:</span> <span class="pre">~classy_config.loader.loader.Loader</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">auto_loader&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#classy_config.register_config" title="Permalink to this definition">#</a></dt>
-<dd><p>Register a config file to load from.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filepath</strong> – Path to the config to load.</p></li>
-<li><p><strong>prefix</strong> – Prefix all config values loaded.</p></li>
-<li><p><strong>loader</strong> – Loader to user for gathering values from config file.
-The default <cite>auto_loader</cite> will resolve a loader from the config file’s extension.</p></li>
-<li><p><strong>strict</strong> – If strict, any duplicate keys will raise a ValueError.
-If not strict, duplicate keys will attempt to be merged if both values are dicts.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="classy_config.register_loader">
-<span class="sig-prename descclassname"><span class="pre">classy_config.</span></span><span class="sig-name descname"><span class="pre">register_loader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="classy_config.loader.loader.html#classy_config.loader.loader.Loader" title="classy_config.loader.loader.Loader"><span class="pre">Loader</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#classy_config.register_loader" title="Permalink to this definition">#</a></dt>
-<dd><p>Register a loader for the auto_loader to use. This will resolve a loader from the provided extension.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>extension</strong> – The file extension this loader will be assigned to.</p></li>
-<li><p><strong>loader</strong> – The loader function.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
+          <section id="classy-config-package">
+<h1>classy_config package<a class="headerlink" href="#classy-config-package" title="Permalink to this heading">#</a></h1>
 <section id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
@@ -289,12 +244,7 @@ If not strict, duplicate keys will attempt to be merged if both values are dicts
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="classy_config.config.html">classy_config.config module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classy_config.config.html#classy_config.config.ConfigValue"><code class="docutils literal notranslate"><span class="pre">ConfigValue</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="classy_config.config.html#classy_config.config.get_raw_config"><code class="docutils literal notranslate"><span class="pre">get_raw_config()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="classy_config.config.html#classy_config.config.register_config"><code class="docutils literal notranslate"><span class="pre">register_config()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="classy_config.config.html">classy_config.config module</a></li>
 </ul>
 </div>
 </section>
@@ -338,9 +288,6 @@ If not strict, duplicate keys will attempt to be merged if both values are dicts
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">classy_config package</a><ul>
-<li><a class="reference internal" href="#classy_config.ConfigValue"><code class="docutils literal notranslate"><span class="pre">ConfigValue</span></code></a></li>
-<li><a class="reference internal" href="#classy_config.register_config"><code class="docutils literal notranslate"><span class="pre">register_config()</span></code></a></li>
-<li><a class="reference internal" href="#classy_config.register_loader"><code class="docutils literal notranslate"><span class="pre">register_loader()</span></code></a></li>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 </ul>
