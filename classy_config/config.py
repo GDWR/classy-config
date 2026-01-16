@@ -1,6 +1,6 @@
 from logging import getLogger
 from pathlib import Path
-from typing import cast, Any, Callable, Dict, List, MutableMapping, Optional, TypeVar, Union
+from typing import cast, Any, Callable, Dict, List, MutableMapping, Optional, Type, TypeVar, Union
 
 from pydantic import BaseModel
 from typing_inspect import get_origin
