@@ -1,6 +1,0 @@
-# exclude everything
-*
-
-# add exceptions
-!pyproject.toml
-!poetry.lock
