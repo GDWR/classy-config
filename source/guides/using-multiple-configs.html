@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="en" data-content_root="">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Conflicting Configs" href="conflicting-configs.html" /><link rel="prev" title="Load Your Config" href="load-your-config.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 6.2.1 and Furo 2024.08.06 -->
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
         <title>Using Multiple Configs - ClassyConfig documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=04c057b233f3c8d71940eee6080f658a04e2027d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=cf727022eb7470bc603c08d2e55c3247faec75c9" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
     
     
 
@@ -255,7 +255,7 @@
         </div>
         <article role="main" id="furo-main-content">
           <section id="using-multiple-configs">
-<h1>Using Multiple Configs<a class="headerlink" href="#using-multiple-configs" title="Permalink to this heading">¶</a></h1>
+<h1>Using Multiple Configs<a class="headerlink" href="#using-multiple-configs" title="Link to this heading">¶</a></h1>
 <p><a class="reference external" href="https://github.com/GDWR/classy-config/tree/main/examples/multiple_configs">View on GitHub</a></p>
 <p>There are times when having multiple config files would allow for cleaner deployment,
 readability, and maintainability of your code base.</p>
@@ -263,16 +263,16 @@ readability, and maintainability of your code base.</p>
 with designated prefixes, so you can use all the config values alongside each other.</p>
 <p>For example, we have the following two separate configuration files:</p>
 <p><code class="docutils literal notranslate"><span class="pre">config.toml</span></code></p>
-<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">app_name</span><span class="o">=</span><span class="s">&quot;Example App&quot;</span>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">app_name</span><span class="o">=</span><span class="s2">&quot;Example App&quot;</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">database.toml</span></code></p>
-<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">host</span><span class="o">=</span><span class="s">&quot;127.0.0.1&quot;</span>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span>
 <span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
 </pre></div>
 </div>
 <p>First, load your two configuration files. We’ll use the prefix of <code class="docutils literal notranslate"><span class="pre">&quot;db&quot;</span></code> for the second one:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">classy_config</span> <span class="kn">import</span> <span class="n">register_config</span><span class="p">,</span> <span class="n">ConfigValue</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">classy_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">register_config</span><span class="p">,</span> <span class="n">ConfigValue</span>
 
 <span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">&quot;config.toml&quot;</span><span class="p">)</span>
 <span class="n">register_config</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="s2">&quot;database.toml&quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;db&quot;</span><span class="p">)</span>  <span class="c1"># Note the prefix</span>
@@ -338,9 +338,9 @@ with designated prefixes, so you can use all the config values alongside each ot
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/furo.js"></script>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
     </body>
 </html>
