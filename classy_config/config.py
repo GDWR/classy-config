@@ -69,7 +69,7 @@ T = TypeVar("T")
 
 
 class _ResolveFromConfig(type):
-    def __call__(cls, variable_path: str, type_: Callable[[..., Any], T], deliminator: str = ".") -> T:
+    def __call__(cls, variable_path: str, type_: Callable[..., T], deliminator: str = ".") -> T:
 
         config_value_path = variable_path.split(deliminator)
 
